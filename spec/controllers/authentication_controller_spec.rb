@@ -7,7 +7,7 @@ RSpec.describe 'Authentication', type: :request do
     let(:valid_credentials) do
       {
         email: user.email,
-        password. user.password
+        password: user.password
       }.to_json
     end
     let(:invalid_credentials) do
