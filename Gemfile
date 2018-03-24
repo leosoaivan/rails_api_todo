@@ -11,6 +11,8 @@ gem 'puma', '~> 3.7'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'jwt', '~> 2.1'
 gem 'active_model_serializers', '~> 0.10.7'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'faker', '~> 1.8', '>= 1.8.7'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
