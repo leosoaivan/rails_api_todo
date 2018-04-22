@@ -12,7 +12,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'jwt', '~> 2.1'
 gem 'active_model_serializers', '~> 0.10.7'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
-gem 'faker', '~> 1.8', '>= 1.8.7'
+gem 'graphql', '~> 1.7', '>= 1.7.14'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,6 +24,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'graphiql-rails', '1.4.4'
 end
 
 group :test do
