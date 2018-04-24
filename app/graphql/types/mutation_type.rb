@@ -1,11 +1,6 @@
 Types::MutationType = GraphQL::ObjectType.define do
   name "Mutation"
+  description "The mutation root for this schema"
 
-  # TODO: Remove me
-  field :testField, types.String do
-    description "An example field added by the generator"
-    resolve ->(obj, args, ctx) {
-      "Hello World!"
-    }
-  end
+  field :createTodo, function: Resolvers::CreateTodo.new, description: "Creates a new Todo"
 end
