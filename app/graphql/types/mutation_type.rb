@@ -3,4 +3,6 @@ Types::MutationType = GraphQL::ObjectType.define do
   description "The mutation root for this schema"
 
   field :createTodo, function: Resolvers::CreateTodo.new, description: "Creates a new Todo"
+
+  field :createUser, function: Resolvers::CreateUser.new, description: "Creates a new User"
 end
