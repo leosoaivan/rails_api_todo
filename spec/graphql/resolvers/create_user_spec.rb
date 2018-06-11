@@ -23,7 +23,15 @@ RSpec.describe Resolvers::CreateUser do
     } 
   }
 
-  it 'creates a new User' do
-    expect{subject.call(nil, valid_args, nil)}.to change(User, :count).by 1
+  context 'with valid params' do
+    it 'creates a new User' do
+      expect{subject.call(nil, valid_args, nil)}.to change(User, :count).by 1
+    end
+  end
+
+  context 'with invalid params' do
+    it 'raises an error' do
+      expect{subject.call(nil, invalid_args, nil)}.to raise_error(ActiveRecord::RecordInvalid)
+    end
   end
 end
